@@ -7,6 +7,8 @@ function filtrarLivros() {
     let livrosFiltrados = categoria == 'disponivel' ? filtrarPorDisponibilidade() : filtrarPorCategoria(categoria)
     exibirOsLivrosNaTela(livrosFiltrados)
     if(categoria == 'disponivel'){
+        const valorTotal = calcularValorTotalDeLivrosDisponiveis(livrosFiltrados)
+        console.log(valorTotal)
         exibirValorTotalDosLivrosDisponiveisNaTela()
     } 
 }
